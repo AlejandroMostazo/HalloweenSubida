@@ -9,7 +9,9 @@
     <script src="./javascript/halloween.js"></script>
     <link rel="shortcut icon" type="image/jpg" href="images/favicon.png"/>
 </head>
-<body onload="sonar('fondo')">
+<body onload="sonar('fondo')"> <!--aquí suena la canción de fondo una vez que se cargue la página-->
+
+    <!--aquí añador los sonidos que utilizo-->
     <audio id="fondo">
         <source src="sounds/fondo.mp3"> </source>
     </audio>
@@ -25,20 +27,42 @@
     <audio id="soncuer">
         <source src="./sounds/bird.mp3"> <source>
     </audio>
+
     <!--el layout basico incluye un container-->
     <div id="container">
+
+        <!--Aquí se espedifican todos los textos de la página-->
         <p id="p1">Scary Halloween Party</p>
         <p id="p2">dont touch the hause</p>
         <p id="p3">dont walk to the grave</p>
         <p id="p4">watch that beautiful is the moon</p>
-        <p id="p5">touch the horn and enjoy</p>
-        <img src="images/bats.gif" id="bats">
-        <img src="images/grito.gif" id="imgrito">
-        <img src="images/luna.gif" id="mgluna">
-        <div id="murcielago" onmouseover="mostrar('bats');sonar('aleteo')" onmouseout="ocultar('bats'); parar('aleteo')"></div>
+        <p id="p5">touch the horn and listen</p>
+        
+        <!--Para que la página sea interactiva necesitamos los divs correspondientes para detectar cuando se está pasando el cursor por encima-->
+
+        <!--este primer div es el de la calabaza para poder ver la carta haciendo click-->
+        <div id="continvi" onclick="mostrar('invitacion')" ></div>
+
+        <!--aquí detallo la carta y le doy la regla de que cuando hagas doble click dentro de la carta se cierre-->
+        <div id=invitacion ondblclick="ocultar('invitacion')">
+            <p id="pinvita">You have been invited to a super terrifying Halloween party, at 03:00 AM in the haunted house on the outskirts of the city, you must go disguised so that the monsters do not discover that you are a human or they will rip your head off, you are warned.
+            Have a terrifyingly good time >:)</p>
+        </div>
+
+        <!--Aqui estan el resto de elementos donde he decidido meter las imagenes dentro de los divs para no tener que espeficicar la posicion de estas en el css-->
+        <div id="murcielago" onmouseover="mostrar('bats');sonar('aleteo')" onmouseout="ocultar('bats'); parar('aleteo')">
+            <img src="images/bats.gif" id="bats">
+        </div>
         <div id="cuerbo" onclick="sonar('soncuer')"></div>
-        <div id="grito" onmouseover="mostrar('imgrito');sonar('songrito')" onmouseout="ocultar('imgrito'); parar('songrito')"></div>
-        <div id="luna" onmouseover="mostrar('mgluna');sonar('sonluna')" onmouseout="ocultar('mgluna'); parar('sonluna')"></div>
+        <div id="grito" onmouseover="mostrar('imgrito');sonar('songrito')" onmouseout="ocultar('imgrito'); parar('songrito')">
+            <img src="images/grito.gif" id="imgrito">
+        </div>
+        <div id="zombie" onmouseover="mostrar('imgzombie');sonar('songrito')" onmouseout="ocultar('imgzombie'); parar('songrito')">
+            <img src="images/zombie.gif" id="imgzombie" width="150px">
+        </div>
+        <div id="luna" onmouseover="mostrar('mgluna');sonar('sonluna')" onmouseout="ocultar('mgluna'); parar('sonluna')">
+            <img src="images/luna.gif" id="mgluna">
+        </div>
     </div>
     
 </body>

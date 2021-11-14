@@ -1,5 +1,7 @@
 /*Stylesheet for halloween*/
 /*ESTA PAGINA NO ES RESPONSIVE*/
+
+/*lo primero que hago es definir un tipo de letra*/
 @font-face {
     font-family: halloween;
     src: url('../fonts/piecesnfi.ttf');
@@ -18,102 +20,115 @@ body {
     background-image: url("../images/background.jpg");
     position: relative; /*el contenedor se puede mover en la pantalla*/
 }
-
+#p1, #p2, #p3, #p4, #p5 {
+    position: absolute; /*fijo en el contenedor todos los textos*/
+}
+/*aqui indico las diferentes reglas que tienen cada uno de los parrafos de la página*/
 #p1 {
-    position: absolute; /*fijo en el contenedor*/
-    top: 20px;
-    left: 200px;
+    top: 1px;
+    left: 150px;
     font-size: 3em;
     text-shadow: 5px 5px rgb(255, 0, 0);
-    
 }
-
 #p2 {
     color: red;
-    position: absolute; /*fijo en el contenedor*/
     top: 500px;
-    right: 300px;
-    font-size: 2em;
-    
+    right: 380px;
+    font-size: 1.5em;
 }
 #p3 {
     color: rgb(241, 145, 0);
-    position: absolute; /*fijo en el contenedor*/
     top: 820px;
-    left: 450px;
+    left: 600px;
     font-size: 1.5em;
-    
 }
 #p4 {
     color: rgb(238, 255, 0);
-    position: absolute; /*fijo en el contenedor*/
     top: 150px;
     left: 120px;
-    font-size: 2.1em;
+    font-size: 1.6em;
     text-shadow: 5px 5px rgb(0, 0, 0);
-    
 }
 #p5 {
     color: rgb(0, 0, 0);
-    position: absolute; /*fijo en el contenedor*/
     top: 390px;
-    left: 100px;
-    font-size: 2.1em;
+    left: 180px;
+    font-size: 1.6em;
     text-shadow: 5px 5px rgb(243, 36, 0);
-    
 }
-#bats {
+
+#pinvita{
+    padding: 70px;
+    color: black;
+    font-size: 1.6em;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+    word-spacing: 0.5em;
+    line-height: 50px;
+}
+
+#bats, #imgrito, #mgluna, #imgzombie, #invitacion {
+    position: absolute; /*fijo en el contenedor todos las fotos*/
+    visibility: hidden; /*dejo las fotos en invisible para que se muestren con el javascript*/
+}
+/*Aquí especifico las reglas para la carta de invitación*/
+#continvi {
+    top: 680px;
     position: absolute;
-    top: 450px;
-    right: 340px;
-    width: 500px;
-    visibility: hidden;
+    left: 860px;
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    cursor:pointer;
+
 }
-#imgrito {
-    position: absolute;
-    top: 820px;
-    left: 450px;
-    visibility: hidden;
+#invitacion {
+    background-color: #fff;
+    width: 800px;
+    height: 650px;
+    cursor:pointer;
+    top: 300px;
+    left: 500px;
 }
-#mgluna {
-    position: absolute;
-    top: 190px;
-    left: 340px;
-    visibility: hidden;
+
+#murcielago, #cuerbo, #grito, #luna, #zombie {
+    cursor:pointer;  /*agrego un puntero para que el usuario sepa que esta sobre un elemento interactivo*/
+    position: absolute; /*fijo en el contenedor todos los divs que contienen el javascript*/
 }
+
+
+/*aqui se decalran los tamaños de los divs con el java script*/
 #murcielago {
     width: 330px;
     height: 160px;
-    position: absolute; /*fijo en el contenedor*/
     top: 500px;
     right: 380px;
-    cursor:pointer;
 }
 
 #cuerbo {
     width: 76px;
     height: 100px;
-    position: absolute; /*fijo en el contenedor*/
     top: 337px;
     left: 320px;
-    cursor:pointer;
 }
-
 
 #grito {
     width: 70px;
     height: 100px;
-    position: absolute; /*fijo en el contenedor*/
     bottom: 100px;
     left: 580px;
-    cursor:pointer;
+}
+
+#zombie {
+    width: 100px;
+    height: 200px;
+    bottom: 10px;
+    left: 900px;
 }
 
 #luna {
     width: 170px;
     height: 150px;
-    position: absolute; /*fijo en el contenedor*/
     top: 210px;
     left: 370px;
-    cursor:pointer;
 }
